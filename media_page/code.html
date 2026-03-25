@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Media Hub | Sovereign Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "outline-variant": "#c3c6d6",
+                        "on-primary-container": "#cbd2ed",
+                        "background": "#f7f9fb",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dae2fd",
+                        "inverse-surface": "#2d3133",
+                        "secondary-container": "#316bf3",
+                        "secondary": "#0051d5",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary-container": "#006846",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-fixed": "#002113",
+                        "on-surface-variant": "#434654",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "primary-container": "#535a71",
+                        "tertiary": "#004e33",
+                        "on-tertiary-container": "#5debaf",
+                        "on-secondary-container": "#fefcff",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#dbe1ff",
+                        "primary": "#3b4358",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed": "#00174b",
+                        "outline": "#737685",
+                        "surface-dim": "#d8dadc",
+                        "surface-tint": "#565e74",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "inverse-primary": "#bec6e0",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#131b2e",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container": "#eceef0"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #3b4358 0%, #535a71 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+    </style>
+</head>
+<body class="antialiased font-body">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col h-screen w-64 border-r-0 bg-slate-50 font-manrope antialiased tracking-tight z-50">
+<div class="p-8">
+<h1 class="text-xl font-bold text-slate-900">Sovereign AI</h1>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Legal Framework</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<div class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-200/50 transition-colors text-slate-500">
+<span class="material-symbols-outlined mr-3" data-icon="home">home</span>
+<span class="font-medium">Home</span>
+</div>
+<div class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-200/50 transition-colors text-slate-500">
+<span class="material-symbols-outlined mr-3" data-icon="school">school</span>
+<span class="font-medium">Students</span>
+</div>
+<div class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-200/50 transition-colors text-slate-500">
+<span class="material-symbols-outlined mr-3" data-icon="gavel">gavel</span>
+<span class="font-medium">Lawyers</span>
+</div>
+<!-- Active Tab: Media -->
+<div class="flex items-center px-4 py-3 rounded-xl text-blue-700 font-semibold border-r-2 border-blue-700 bg-slate-200/50">
+<span class="material-symbols-outlined mr-3" data-icon="videocam">videocam</span>
+<span class="font-medium">Media</span>
+</div>
+<div class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-200/50 transition-colors text-slate-500">
+<span class="material-symbols-outlined mr-3" data-icon="description">description</span>
+<span class="font-medium">Documents</span>
+</div>
+<div class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-200/50 transition-colors text-slate-500">
+<span class="material-symbols-outlined mr-3" data-icon="history">history</span>
+<span class="font-medium">History</span>
+</div>
+</nav>
+<div class="p-4 space-y-4">
+<button class="w-full signature-gradient text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-primary/20">
+                New Consultation
+            </button>
+<div class="pt-4 border-t border-slate-200 space-y-1">
+<div class="flex items-center px-4 py-2 text-slate-500 hover:text-slate-900 transition-colors text-sm">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="settings">settings</span>
+<span>Settings</span>
+</div>
+<div class="flex items-center px-4 py-2 text-slate-500 hover:text-slate-900 transition-colors text-sm">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="help_center">help_center</span>
+<span>Support</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full h-16 sticky top-0 z-40 bg-white/80 backdrop-blur-xl flex items-center justify-between px-8 shadow-sm">
+<div class="flex items-center gap-4">
+<span class="font-black text-slate-900 text-lg">Sovereign Intelligence</span>
+<div class="h-4 w-[1px] bg-slate-200"></div>
+<span class="font-manrope uppercase tracking-widest text-[10px] text-slate-500">AI provides guidance, not legal advice</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-100 border-none rounded-full text-sm focus:ring-2 focus:ring-secondary/20 w-64" placeholder="Search case law..." type="text"/>
+</div>
+<button class="text-blue-600 font-bold text-xs uppercase tracking-widest hover:opacity-80">Upgrade</button>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-slate-900" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-slate-900" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Content Page -->
+<div class="p-10 space-y-12 max-w-7xl mx-auto">
+<!-- Hero Section / Featured Media -->
+<section class="grid grid-cols-12 gap-6 items-end">
+<div class="col-span-12 lg:col-span-8 relative rounded-3xl overflow-hidden aspect-video shadow-2xl group cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="high-tech law office with panoramic city views at night, cool blue tones and sleek glass surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGZzMuLkebj119Ik3aN9QUH_YuCgrGM0L_AE4VgMVs5BXv7TS9lRKM4he70rqggi4Ltk4PxEkKgCeLN6i9CLQSOXk_u6720At3EiksNVVaelx_UyL-F3Yb5BaKLh9QyNr63fGL0fb9lBlP0RdegPvWxqq4DtnZDYfITEHJWX_TAkRfkRFdjpc6BeeBBCGCHRH8CkfbzVwLyRJqD2ONBW8AnPa9wBsWe5zdfty8o0ffdHarFOM9tVcEPtlfJz5EDjr4yoRYuLSYh5A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full flex justify-between items-end">
+<div class="max-w-xl">
+<span class="inline-block bg-secondary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Live Analysis</span>
+<h2 class="text-4xl font-headline font-extrabold text-white mb-3">The Digital Services Act: Impact on AI Governance</h2>
+<p class="text-slate-300 font-body text-sm leading-relaxed">Join Chief Counsel Sarah Miller as she breaks down the latest EU compliance mandates for generative models.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 hover:bg-white/40 transition-all">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<!-- AI Explanation Overlay Feature UI -->
+<div class="absolute top-10 right-10 w-72 glass-panel p-5 rounded-2xl border border-white/20 shadow-xl">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-tertiary text-lg" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-600">AI Context Engine</span>
+</div>
+<h4 class="font-headline font-bold text-slate-900 mb-1">Mandatory Disclosure</h4>
+<p class="text-xs text-slate-600 leading-normal">Legal requirement for AI systems to explicitly state they are non-human and list data sources used for training outputs.</p>
+<div class="mt-4 flex justify-between items-center">
+<span class="text-[9px] text-tertiary font-bold bg-tertiary/10 px-2 py-0.5 rounded">HIGH CONFIDENCE</span>
+<button class="text-xs font-semibold text-secondary flex items-center">Cite Source <span class="material-symbols-outlined text-sm ml-1" data-icon="arrow_outward">arrow_outward</span></button>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 h-full flex flex-col gap-6">
+<div class="bg-surface-container-low p-6 rounded-3xl flex-1 flex flex-col justify-between">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-2 block">Weekly Digest</span>
+<h3 class="text-xl font-headline font-bold text-on-surface">Podcast: Legal Pulse</h3>
+<p class="text-sm text-on-surface-variant mt-2">Episode 42: "Algorithmic Liability in the Automotive Sector"</p>
+</div>
+<div class="mt-6 space-y-4">
+<div class="h-1 bg-slate-200 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-1/3"></div>
+</div>
+<div class="flex items-center justify-between text-slate-400">
+<span class="text-[10px] font-mono">12:45 / 45:00</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary" data-icon="replay_10">replay_10</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary" data-icon="pause_circle" style="font-variation-settings: 'FILL' 1;">pause_circle</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary" data-icon="forward_10">forward_10</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="book_2">book_2</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Download Transcript</h4>
+<p class="text-xs text-slate-500">Available in PDF, DOCX, MD</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-slate-300" data-icon="download">download</span>
+</div>
+</div>
+</section>
+<!-- Video Grid -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<div>
+<h3 class="text-2xl font-headline font-extrabold text-slate-900">Analysis Briefings</h3>
+<p class="text-sm text-slate-500">Expert-led breakdowns of regional legal shifts</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-full border border-outline-variant text-xs font-bold uppercase tracking-wider text-slate-600 hover:bg-white transition-colors">Latest</button>
+<button class="px-4 py-2 rounded-full bg-slate-200/50 text-xs font-bold uppercase tracking-wider text-slate-400">Trending</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Video Card 1 -->
+<div class="group">
+<div class="relative rounded-2xl overflow-hidden aspect-[16/10] mb-4 shadow-sm group-hover:shadow-xl transition-shadow">
+<img class="w-full h-full object-cover" data-alt="modern minimalist courtroom with soft natural lighting and leather chairs, sophisticated legal atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc1pn_32LUwYXJQkqdyLFHfiauEJWbyfN9BImh_XBHAuWZt_RfsOJsIgyycGMmRHML9tEevMNmiyqkA7jCn63u2iybynBGunOmUATuje3hs1GM2_4MVuFZa2Flaek0r3lfEVP1FXk-hdtrazfOACxEOjy1zchVVVSgpQmPhWgcAFcImJJcIdB-_kBuRdYNV3agPqwBc02FQTFNSOy5DLOeAP16jevtVS4i1unJDftmY1psQFu_NRsybm-GlKOhirBIszXsslPw7Jk"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute bottom-3 right-3 px-2 py-1 rounded bg-black/60 backdrop-blur-md text-white text-[10px] font-mono">14:20</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-lg scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<h4 class="font-headline font-bold text-on-surface leading-tight group-hover:text-secondary transition-colors">Intellectual Property Rights in Synthetic Media</h4>
+<div class="mt-2 flex items-center gap-3">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="professional headshot of a female lawyer with glasses, neutral office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmEbZLjlCmiGoB-Vf0ZyPeA9yeRtRfwPXkdvdg6bZi9fh7RiaozuRMNyaQCvmNJiWH2yDOo8CVj2-F28J5Zaof1DH1kYDlhsxplaEKq0yHW7SFvy6HFzfucdta3KFAy3ZA9fQY6sZHOGciTyKBwJrSKc4l4kW79jZrK1w4DE8oyzbFSFwH5DNz6AdUKzROjZmZ8w4kgkeyYt3Le6gsCfL2pP6icKRK0dLAhe14vWS71LaF_L9w8lduinLjIqzwxNFC2OU4MQdrlVw"/>
+<span class="text-xs text-on-surface-variant font-medium">Dr. Elena Vance</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-xs text-slate-400">2 days ago</span>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="group">
+<div class="relative rounded-2xl overflow-hidden aspect-[16/10] mb-4 shadow-sm group-hover:shadow-xl transition-shadow">
+<img class="w-full h-full object-cover" data-alt="top view of a desk with legal documents, a pen, and a high-end laptop showing graphs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzUIPG2iGLYiIX_YJltCaO66jRp9P-8jPVxm6aiDEgI9da-onlK7vTVRl2ZxFF-ZT8VhvZ9TtjKoPvaTQ7G2UvC0hlBa2d1EAWI5M5JOB91CmRQdoDWBKTbmBFiHY_pCxXPA4JgEx2utaNXTaRPCqXE1PivWFoQlj0u1i5CYymG48K1-mT0V2kORES57IR9co4l5hufv9PhhIUuK5mAccRSQXpam2BvjIA8Jl2gYBXt0jT8HVS_AgBsaw3EaLyEx6aRHWj38NoAIs"/>
+<div class="absolute bottom-3 right-3 px-2 py-1 rounded bg-black/60 backdrop-blur-md text-white text-[10px] font-mono">08:45</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-lg scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<h4 class="font-headline font-bold text-on-surface leading-tight group-hover:text-secondary transition-colors">GDPR 2.0: Preparing for the Compliance Shift</h4>
+<div class="mt-2 flex items-center gap-3">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="middle aged male lawyer in a blue suit, friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpNDvZqSrxBpuNk0YX7PWIYEHVeH0qcAQ8oyYdIFtmkK4yUnMdqKfmzYFVU7wKqp3SDcFrMD94lUE0FMGrUNwldtsdIwnNMcCTofpqMn8dELbBi6XeHKUvr7dFsrST3sW0aIfqbWOd5PiV7ba_X908uSlByiB30RHJD20yOIjHkDTN2dQbEUuahJGbbjs7M9TdbgToUa6X0O78yhXrDl4gc2dpJYKkSLM50F3gr3UVyJ6wVZCiLfzZDLidr1Pv3TlaWLW6MJJFeTY"/>
+<span class="text-xs text-on-surface-variant font-medium">Marcus Sterling</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-xs text-slate-400">5 days ago</span>
+</div>
+</div>
+<!-- Video Card 3 -->
+<div class="group">
+<div class="relative rounded-2xl overflow-hidden aspect-[16/10] mb-4 shadow-sm group-hover:shadow-xl transition-shadow">
+<img class="w-full h-full object-cover" data-alt="abstract representation of global data networks over a dark map of the world, futuristic blue glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvnuF4fKPC2rlCA9Jtpm19Zuvef49F99kfYVcq6ddSj0xmb6qY1hXoOsUL2ZlNRsHBkPq7wV4eylIl7dQcWeL0NQQMffcoKHHx8rIp42ilo33HoayNYxo34tZREiU-osENSKHt8mWWbxvBSGeYGc-wF18jiyHxQW8e6Pmz8se-Al23n7X1UghyNZl-4sx4ZgEhCvEpnpFPg3fIj1XUcgVjg9tzrvA12Vsq1-9bhRq8qG2L20knwp3wX2RiL0JoRYI5L17qUCPPJX4"/>
+<div class="absolute bottom-3 right-3 px-2 py-1 rounded bg-black/60 backdrop-blur-md text-white text-[10px] font-mono">22:15</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-lg scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<h4 class="font-headline font-bold text-on-surface leading-tight group-hover:text-secondary transition-colors">Global Jurisdictional Conflict in Cloud Data</h4>
+<div class="mt-2 flex items-center gap-3">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="young woman professional in a modern studio setting with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCt4vRVZxQztW7nLxcZdecP9ksvWSfcZu-rsk7nvf2ikpEZDMs-upCMnqidbfsgtwWDt8gO7ryYpuUVdIZDVgWm5xxcbfemt8WnDCyovSDiE9xks3IcM1nnMxO6NGBsiNSaNCIUyCd2O_YJXAzPESIrtjtl0H3zBOCtbqteWknIqxT2XNDz7RF5ALMsxuv8eKOC50rTrNhRvPGUC9EDa8zKH7au08wcyXIRABaeS8P93fMPPIJpTmta610tVXobe3OT_QdREuMApI"/>
+<span class="text-xs text-on-surface-variant font-medium">Ava Chen</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-xs text-slate-400">1 week ago</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Podcast/Audio Section - Bento Style -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<div>
+<h3 class="text-2xl font-headline font-extrabold text-slate-900">Audio Discussions</h3>
+<p class="text-sm text-slate-500">In-depth legal discourse for on-the-go professionals</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+<!-- Featured Podcast -->
+<div class="lg:col-span-2 bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden flex flex-col justify-between">
+<img class="absolute top-0 right-0 w-1/2 opacity-20 transform translate-x-1/4 -translate-y-1/4" data-alt="abstract audio wave patterns in deep navy and vibrant blue gradients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARV2CRirOoBSZZxu5L0SY7ljPpQbYVzaxUaq6nv53-4NB7tbcREqGbchgBzjmeP1HIBmKaY9DsJwp91S1G4JGwXghs85pNVq8TSngnERTBi2R3SnvzUlwv963SyYTK21w4-2LNBTylhuD9nPvYlv3FXuJnZErIhj36Vn1L4wrOkQxDnZuiEnCWBDwAVHrHC84numlIzj6nC15y5KQSDddPOnVmlD4l5rJan3mgGwI67D0i42WqRRdci-8W4sxf8zb8HKXG0rjXQKI"/>
+<div class="z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-secondary p-2 rounded-lg"><span class="material-symbols-outlined" data-icon="podcasts">podcasts</span></span>
+<span class="font-bold text-xs uppercase tracking-widest text-secondary-fixed">Sovereign Voice</span>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-4">A Look Into Antitrust Laws of the Metaverse</h3>
+<p class="text-slate-400 text-sm leading-relaxed max-w-sm">Exploring how digital property rights intersect with current competition standards in immersive environments.</p>
+</div>
+<div class="mt-12 flex items-center gap-6 z-10">
+<button class="w-14 h-14 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex-1">
+<div class="flex items-center justify-between text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
+<span>Now Playing</span>
+<span>48 Minutes</span>
+</div>
+<div class="flex gap-1 h-4 items-center">
+<div class="h-1 flex-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-1/4"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Podcast List -->
+<div class="lg:col-span-2 space-y-4">
+<div class="bg-surface-container-low p-4 rounded-2xl flex items-center gap-4 hover:bg-surface-container-lowest transition-all cursor-pointer group shadow-sm">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-slate-300">
+<img class="w-full h-full object-cover" data-alt="macro photo of a judge's gavel on a wooden sound block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClctF4SqcwCtXwSy5PLM9f2fSm70RvYNinoPDT-xN8kZyFce13lbigHVlb8ztdbwDUflqT6fmKhROf7knpNW-OczC5QA7F4VCdTxj7jJrF1MphZPnCXgKofqC2Pa83V1vEAKtOuQ2MHv5-OCkWxVz5tUBvAg2qtvt0femXBub3sUuFlt2FCP5TYm94s2E5L8qY1YhedrgfBW4nmRhXsxW7tH5xnSUCNgE7Tuk1RbI-f5mw5RcMKbQUFINOkwkbTBOFL0y-5h4nkD8"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm text-on-surface group-hover:text-secondary transition-colors">The Future of Smart Contracts</h4>
+<p class="text-xs text-slate-500 mt-1">24 min • Jan 15, 2024</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-secondary" data-icon="play_circle">play_circle</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl flex items-center gap-4 hover:bg-surface-container-lowest transition-all cursor-pointer group shadow-sm">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-slate-300">
+<img class="w-full h-full object-cover" data-alt="city skyline reflection in a skyscraper's glass windows during daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4D3JED7nt7GrrXPvWfjUQoWECRWywlR_3ZXbhp9MWx7A2pK9_APx5LlKdFwJzHEJPU6nOqftjcmW9tvmsPrHe0lCNuhuh8psYmfw-0-1J0xBwVYvfJb2N8d4pl9iuk32A_Na_X8mMz3LEFuDrm5zX_SfSacQfIHhHB0brYHu6mto8sm-2PwQfy1ckQwuL_xEWijNhiJ-CcQa5PB6aLemzq2-IQ11u3VmBe8bY4pLqdBswEYzmWEQClxLKTTS2HPiqIYk_WKG3TEQ"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm text-on-surface group-hover:text-secondary transition-colors">Employment Law in the Gig Economy</h4>
+<p class="text-xs text-slate-500 mt-1">32 min • Jan 12, 2024</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-secondary" data-icon="play_circle">play_circle</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl flex items-center gap-4 hover:bg-surface-container-lowest transition-all cursor-pointer group shadow-sm">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-slate-300">
+<img class="w-full h-full object-cover" data-alt="close up of an ink pen and an elegant paper document with decorative border" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApQSOjDx1qsgkGB_mVJPu2KQdcuwhB95Cqzeco23TlgO46rMKwQkpJtno6k6ihPqWUJ1JQCWqD1tRwlEkqeSP0aXTUemB_idHHDSCmGWzvF80m4fT28VuDw-KZX3gN19aUUKKXclLC5t67-RuBvP_dIZcvRJttY5ynJq3P2ZsMamG2d_pOE0wap1GICGtENk0azKsHEb1SjXNSsWUVOW0do6YFo_pRHF6ToJ2lTjpIIKAYGi8FxKYzJM6ucZUeS88TQvx1ETRCiNU"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm text-on-surface group-hover:text-secondary transition-colors">Privacy by Design: Legal Strategies</h4>
+<p class="text-xs text-slate-500 mt-1">19 min • Jan 08, 2024</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-secondary" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Disclaimer/Footer-like section -->
+<footer class="pt-12 border-t border-slate-200 text-center">
+<p class="text-[10px] font-manrope font-bold text-slate-400 uppercase tracking-widest">
+                    Media generated by Sovereign AI context engine. Verbatim transcripts verified by senior legal analysts.
+                </p>
+</footer>
+</div>
+</main>
+</body></html>

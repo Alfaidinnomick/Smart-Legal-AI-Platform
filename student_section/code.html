@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sovereign AI | Student Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#003ea8",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#005236",
+              "on-background": "#191c1e",
+              "secondary-fixed-dim": "#b4c5ff",
+              "primary-fixed-dim": "#bec6e0",
+              "outline-variant": "#c3c6d6",
+              "on-primary-container": "#cbd2ed",
+              "background": "#f7f9fb",
+              "surface-bright": "#f7f9fb",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#dae2fd",
+              "inverse-surface": "#2d3133",
+              "secondary-container": "#316bf3",
+              "secondary": "#0051d5",
+              "on-primary": "#ffffff",
+              "on-surface": "#191c1e",
+              "surface-container-highest": "#e0e3e5",
+              "tertiary-container": "#006846",
+              "on-error-container": "#93000a",
+              "surface-container-high": "#e6e8ea",
+              "on-tertiary-fixed": "#002113",
+              "on-surface-variant": "#434654",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#3f465c",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e0e3e5",
+              "primary-container": "#535a71",
+              "tertiary": "#004e33",
+              "on-tertiary-container": "#5debaf",
+              "on-secondary-container": "#fefcff",
+              "inverse-on-surface": "#eff1f3",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#dbe1ff",
+              "primary": "#3b4358",
+              "surface": "#f7f9fb",
+              "on-secondary-fixed": "#00174b",
+              "outline": "#737685",
+              "surface-dim": "#d8dadc",
+              "surface-tint": "#565e74",
+              "tertiary-fixed-dim": "#4edea3",
+              "inverse-primary": "#bec6e0",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#131b2e",
+              "tertiary-fixed": "#6ffbbe",
+              "surface-container-low": "#f2f4f6",
+              "surface-container": "#eceef0"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #3b4358 0%, #535a71 100%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col h-screen w-64 border-r-0 bg-slate-50 dark:bg-slate-950 font-manrope antialiased tracking-tight z-50">
+<div class="p-6">
+<h1 class="text-xl font-bold text-slate-900 dark:text-slate-100">Sovereign AI</h1>
+<p class="text-xs uppercase tracking-widest text-slate-500 mt-1">Legal Framework</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-blue-700 dark:text-blue-400 font-semibold border-r-2 border-blue-700 dark:border-blue-400 bg-slate-200/50 dark:bg-slate-800/50 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span>Students</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span>Lawyers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+<span>Media</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Documents</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>History</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200/50 dark:border-slate-800/50">
+<button class="w-full signature-gradient text-white py-3 rounded-xl font-semibold mb-6 shadow-lg shadow-primary/20">New Consultation</button>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-500 hover:bg-slate-100 text-sm" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-500 hover:bg-slate-100 text-sm" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="help_center">help_center</span>
+<span>Support</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="flex items-center justify-between px-8 w-full ml-64 w-full h-16 sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all">
+<div class="flex items-center gap-4">
+<span class="font-headline uppercase tracking-widest text-[10px] text-slate-500">AI provides guidance, not legal advice</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-secondary/20 w-64 transition-all" placeholder="Search curriculum..." type="text"/>
+</div>
+<button class="text-secondary font-bold text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">Upgrade</button>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-12 max-w-7xl mx-auto space-y-20">
+<!-- Hero Section / Welcome -->
+<section class="relative overflow-hidden rounded-[2rem] p-12 signature-gradient text-white flex justify-between items-center">
+<div class="relative z-10 max-w-lg space-y-6">
+<h2 class="text-5xl font-headline font-extrabold tracking-tight">The Future of Legal Mastery</h2>
+<p class="text-lg text-primary-fixed leading-relaxed">Harness Sovereign Intelligence to navigate complex case law, synthesize statutes, and accelerate your path to the bar.</p>
+<div class="flex gap-4">
+<button class="bg-surface-container-lowest text-primary px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-blue-50 transition-colors shadow-xl">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+                        Summarize with AI
+                    </button>
+<button class="border border-white/20 backdrop-blur-md text-white px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+                        Learn with AI
+                    </button>
+</div>
+</div>
+<div class="hidden lg:block relative group">
+<div class="absolute inset-0 bg-secondary/20 blur-3xl rounded-full transition-all duration-700 group-hover:bg-secondary/40"></div>
+<img alt="Legal books and digital tablet" class="relative z-10 w-80 h-auto rounded-3xl shadow-2xl rotate-3 transition-transform duration-500 group-hover:rotate-0" data-alt="Modern close-up of heavy leather-bound legal books next to a glowing minimalist digital tablet on a clean white desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYDE_wEpYGmElSJSzA1CG_p9nV2EOJRhYAORyIJw7GSJEWO05An5hZpOu8x1bFJrjlBjzrUbPzV0gDrPWbSQkW7uj5WHkF_6b39bTPcN7jZ06RIIoHR_LtcYX5ISrMuvi0dZywlIA9AbxWihgIzqZ2YYN3761K9_OMVa4b60Jn7G0FozYgTZ1aQja-r34Je-RXRtlmRWm48hCUCLQQ9eIsjWwKgYDY4ZXEcYFZwDMQQ8R7fHeBQNom8aMU_hFebiWwHYtX8f3ZnTg"/>
+</div>
+</section>
+<!-- Bento Grid: Courses & Stats -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Left Column: Course Cards -->
+<div class="md:col-span-8 space-y-8">
+<div class="flex items-baseline justify-between">
+<h3 class="text-2xl font-headline font-bold text-on-background">Active Courses</h3>
+<a class="text-secondary text-sm font-semibold hover:underline" href="#">View All Curriculum</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Course Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-[1.5rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-secondary/10 group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-2xl bg-secondary/5 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="balance">balance</span>
+</div>
+<span class="bg-tertiary/10 text-tertiary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">In Progress</span>
+</div>
+<h4 class="text-xl font-headline font-bold mb-2">Civil Law &amp; Procedure</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Understanding liability, negligence, and the mechanics of civil litigation.</p>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-semibold text-on-surface-variant">
+<span>Curriculum Progress</span>
+<span>74%</span>
+</div>
+<div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[74%] transition-all"></div>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-[1.5rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-secondary/10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-2xl bg-secondary/5 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">New Content</span>
+</div>
+<h4 class="text-xl font-headline font-bold mb-2">Constitutional Law</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">The foundational principles of state power and individual liberties.</p>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-semibold text-on-surface-variant">
+<span>Curriculum Progress</span>
+<span>22%</span>
+</div>
+<div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[22%] transition-all"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Study Notes -->
+<div class="md:col-span-4 bg-surface-container-low rounded-[2rem] p-8 flex flex-col">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-secondary" data-icon="draw">draw</span>
+<h3 class="text-xl font-headline font-bold">Recent Notes</h3>
+</div>
+<div class="space-y-4 flex-1">
+<div class="bg-surface-container-lowest p-5 rounded-2xl hover:bg-white transition-colors cursor-pointer group">
+<p class="text-xs text-secondary font-bold uppercase tracking-tighter mb-1">Civil Procedure</p>
+<h5 class="font-bold text-on-surface group-hover:text-secondary transition-colors">Summary of Res Judicata</h5>
+<p class="text-sm text-on-surface-variant line-clamp-2 mt-2">Analysis of finality in judicial proceedings and bars on subsequent litigation...</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl hover:bg-white transition-colors cursor-pointer group">
+<p class="text-xs text-secondary font-bold uppercase tracking-tighter mb-1">Torts</p>
+<h5 class="font-bold text-on-surface group-hover:text-secondary transition-colors">Vicarious Liability Matrix</h5>
+<p class="text-sm text-on-surface-variant line-clamp-2 mt-2">Relationship between employee actions and employer responsibility standards...</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl hover:bg-white transition-colors cursor-pointer group">
+<p class="text-xs text-secondary font-bold uppercase tracking-tighter mb-1">Constitutional</p>
+<h5 class="font-bold text-on-surface group-hover:text-secondary transition-colors">Due Process Clauses</h5>
+<p class="text-sm text-on-surface-variant line-clamp-2 mt-2">Comparison of the 5th and 14th amendments regarding procedural protections...</p>
+</div>
+</div>
+<button class="mt-8 flex items-center justify-center gap-2 py-4 border border-outline-variant/30 rounded-2xl font-bold text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Create New Note
+                </button>
+</div>
+</section>
+<!-- Quiz Section -->
+<section class="space-y-8">
+<div class="flex items-end justify-between">
+<div>
+<h3 class="text-3xl font-headline font-extrabold text-on-background">Bar Readiness Quizzes</h3>
+<p class="text-on-surface-variant mt-2">Personalized adaptive assessments powered by Sovereign AI.</p>
+</div>
+<div class="bg-surface-container-high rounded-full px-6 py-2 flex items-center gap-3">
+<div class="w-3 h-3 bg-tertiary rounded-full"></div>
+<span class="text-sm font-bold">Overall Accuracy: 88.4%</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Quiz Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/10 rounded-[2rem] overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-500">
+<div class="h-40 bg-slate-100 relative overflow-hidden">
+<img alt="Legal document with glasses" class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="Monochromatic overhead shot of a legal contract with elegant tortoise-shell glasses lying on top of the text" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLk96_m8-dR9QQyyuLJ3hJbUdkh4ODz4J9ObV13eS6fFMK4mC7oMUyuBb1fw7ykRA21r7Yb54TKGhVL7I-ZlplLmjzoOzBV2oBUDmNGNtMDl2SMy24jIFpsIxUNUnCM-1PWao9Iibv6hnUHPdxQYNDdP7Gv7NAB1Ysk_Sv1qldajaI4ue22r-2em6VT6IbSN05fQizBqNxcDZ_4VKLhZavMTuA8af40g23BWH-d5TXIyLU_t6V9eUBICUWLi6WuTlRXf7IQhNYCT4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="bg-secondary text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Practice Exam</span>
+</div>
+</div>
+<div class="p-8 space-y-4">
+<h4 class="text-xl font-headline font-bold">Ethics &amp; Professional Conduct</h4>
+<div class="flex items-center gap-6 text-sm text-on-surface-variant font-medium">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="timer">timer</span> 20 mins
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="quiz">quiz</span> 15 Questions
+                            </div>
+</div>
+<button class="w-full py-4 bg-secondary text-white font-bold rounded-2xl hover:opacity-90 transition-opacity">Start Assessment</button>
+</div>
+</div>
+<!-- Quiz Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/10 rounded-[2rem] overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-500">
+<div class="h-40 bg-slate-100 relative overflow-hidden">
+<img alt="Statue of justice" class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="Distant silhouette of Lady Justice statue against a bright hazy background emphasizing scales and sword" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxPmuzD5Dr7Oom1vDibwW2Rv7ae5uukTthT-9S40VlPTi8_nYLWEqUwgf6vLU537Fa_Fs2kL9z4-jQ0m7AXgj_c9YPV91uTTJuTMqn0b5-T2TeGH6eGQ5BIireYMQ67P91FwX-nP38v_OewUWfGjA8_VgyHKOMxZCEklkaXePo0f2QIsvqXcNtTLQffh-nnDFrKhCYXTU3Ix4a8nZNMrN0Ki7Q9EdO-HBrZiqOW11nabwcig4gmCN8aIq97-QQRcZu4VQk1LoIQSw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="bg-tertiary text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">AI Recommendation</span>
+</div>
+</div>
+<div class="p-8 space-y-4">
+<h4 class="text-xl font-headline font-bold">Criminal Procedure Drill</h4>
+<div class="flex items-center gap-6 text-sm text-on-surface-variant font-medium">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="timer">timer</span> 10 mins
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="quiz">quiz</span> 10 Questions
+                            </div>
+</div>
+<button class="w-full py-4 border-2 border-secondary text-secondary font-bold rounded-2xl hover:bg-secondary/5 transition-colors">Resume Quiz</button>
+</div>
+</div>
+<!-- Mastery Tracker (Decorative Widget) -->
+<div class="bg-white rounded-[2rem] p-8 flex flex-col justify-center items-center text-center shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16"></div>
+<div class="relative z-10">
+<div class="inline-flex items-center justify-center w-24 h-24 rounded-full border-[6px] border-surface-container-high relative mb-6">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-secondary" cx="48" cy="48" fill="none" r="42" stroke="currentColor" stroke-dasharray="264" stroke-dashoffset="66" stroke-width="6"></circle>
+</svg>
+<span class="absolute text-2xl font-black text-on-surface">75%</span>
+</div>
+<h4 class="text-xl font-headline font-bold">Weekly Mastery</h4>
+<p class="text-sm text-on-surface-variant mt-2 max-w-[200px] mx-auto">You're in the top 5% of Sovereign AI users this week.</p>
+<div class="mt-8 flex gap-2 justify-center">
+<div class="h-12 w-3 bg-secondary rounded-full"></div>
+<div class="h-12 w-3 bg-secondary rounded-full"></div>
+<div class="h-12 w-3 bg-secondary rounded-full"></div>
+<div class="h-12 w-3 bg-secondary/20 rounded-full"></div>
+<div class="h-12 w-3 bg-secondary/20 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final AI Helper Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 pt-10">
+<div class="glass-panel rounded-[2rem] p-10 flex gap-8 items-start hover:shadow-lg transition-shadow">
+<div class="p-4 rounded-2xl bg-primary text-on-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="auto_awesome" data-weight="fill">auto_awesome</span>
+</div>
+<div class="space-y-4">
+<h4 class="text-2xl font-headline font-bold">Summarize with AI</h4>
+<p class="text-on-surface-variant leading-relaxed">Upload any judicial opinion or legal textbook chapter. Sovereign AI will extract key holdings, procedural history, and core arguments into a 2-minute brief.</p>
+<button class="text-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                        Upload Document <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="glass-panel rounded-[2rem] p-10 flex gap-8 items-start hover:shadow-lg transition-shadow">
+<div class="p-4 rounded-2xl bg-secondary text-on-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="school" data-weight="fill">school</span>
+</div>
+<div class="space-y-4">
+<h4 class="text-2xl font-headline font-bold">Learn with AI</h4>
+<p class="text-on-surface-variant leading-relaxed">Engage in a Socratic dialogue with our legal model. Challenge your understanding of difficult concepts through interactive case law simulation.</p>
+<button class="text-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                        Launch Tutor <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB Suppression Applied (As per instructions for Student Section/Details) -->
+</body></html>
